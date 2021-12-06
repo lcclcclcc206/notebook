@@ -152,3 +152,53 @@ Skip	No files found.
 
 \d+ files? found\?
 ```
+
+## Lesson 9: 处理空格
+
+使用 `\t` 来匹配 tab，使用 `\n` 来匹配新的一行，使用 `\r` 来匹配回车（在Windows环境中生效）。
+
+使用 `\s` 来匹配上面的任何特定空格。
+
+**练习：匹配空格**
+
+```
+Task	Text	 
+Match	1.   abc	
+Match	2.	abc	
+Match	3.           abc	
+Skip	4.abc
+
+\d\.\s+abc
+```
+
+## Lesson 10: 开头与结尾符
+
+使用 `^` 和 `$` 来匹配一行的开头和结尾
+
+**练习：匹配行**
+
+```
+Task	Text	 
+Match	Mission: successful	
+Skip	Last Mission: unsuccessful	
+Skip	Next Mission: successful upon capture of target
+
+^Mission: successful$
+```
+
+## Lesson 11: 匹配组
+
+正则表达式使我们不仅可以匹配文本，还可以提取信息以进行进一步处理。这是通过定义字符组并使用特殊括号 `(` 与 `)` 元字符捕获它们来完成的。一对括号内的任何子模式都将被捕获为一个组。在实践中，这可用于从各种数据中提取电话号码或电子邮件等信息。
+
+例如，假设您有一个命令行工具来列出您在云中的所有图像文件。然后您可以使用诸如 `^(IMG\d+\.png)$` 之类的模式来捕获和提取完整的文件名，但如果您只想捕获没有扩展名的文件名，则可以使用模式 `^(IMG\d+)\.png$` 仅捕获句点之前的部分。
+
+**练习：匹配组**
+
+```
+Task	Text	                    Capture Groups	 
+Capture	file_record_transcript.pdf	file_record_transcript	
+Capture	file_07241999.pdf	        file_07241999	
+Skip	testfile_fake.pdf.tmp
+
+^(file.+)\.pdf$
+```
