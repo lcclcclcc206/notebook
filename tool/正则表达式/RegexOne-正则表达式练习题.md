@@ -108,10 +108,40 @@ Capture	   jumps over the lazy dog.	        jumps over the lazy dog.
 
 ## 问题 7: 从日志文件提取信息
 
+在本例中，我们将使用 Android adb 调试会话的实际输出。您的目标是使用我们迄今为止学到的任何正则表达式技术来提取堆栈跟踪的文件名、方法名和行号（它们遵循“at package.class.methodname(filename:linenumber)”形式） ）。
+
+```
+Task	    Text	                                                    Capture Groups	 
+Skip	    W/dalvikvm( 1553): threadid=1: uncaught exception		
+Skip	    E/( 1553): FATAL EXCEPTION: main		
+Skip	    E/( 1553): java.lang.StringIndexOutOfBoundsException		
+Capture	    E/( 1553):   at widget.List.makeView(ListView.java:1727)	makeView 
+                                                                        ListView.java 1727	
+Capture	    E/( 1553):   at widget.List.fillDown(ListView.java:652)	    fillDown 
+                                                                        ListView.java 652	
+Capture	    E/( 1553):   at widget.List.fillFrom(ListView.java:709)	    fillFrom 
+                                                                        ListView.java 709
+```
+
 ## 问题 8: 从 URL 解析和提取数据
 
+通过网络处理文件和资源时，您经常会遇到可以直接解析和使用的 URI 和 URL。大多数标准库都会有类来解析和构造这些类型的标识符，但是如果您需要在日志或更大的文本语料库中匹配它们，您可以使用正则表达式很容易地从它们的结构化格式中提取信息。
 
+URI，或统一资源标识符，是一种资源的表示，通常由scheme、host、port（可选）和resource path组成，分别在下面突出显示。
 
+http://regexone.com:80/page
 
+该方案描述了与之通信的协议，主机和端口描述了资源的来源，完整路径描述了资源在来源处的位置。
+
+在下面的练习中，尝试提取列出的所有资源的协议、主机和端口。
+
+```
+Task	    Text	                                                            Capture Groups	 
+Capture	    ftp://file_server.com:21/top_secret/life_changing_plans.pdf	        ftp file_server.com 21	
+Capture	    https://regexone.com/lesson/introduction#section	                https regexone.com	
+Capture	    file://localhost:4040/zip_file	                                    file localhost 4040	
+Capture	    https://s3cur3-server.com:9999/	                                    https s3cur3-server.com 9999	
+Capture	    market://search/angry%20birds	                                    market search
+```
 
 
