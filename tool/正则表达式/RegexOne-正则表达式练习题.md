@@ -71,7 +71,11 @@ Capture	<a>This is a link</a>	                    a
 Capture	<a href='https://regexone.com'>Link</a>	    a	
 Capture	<div class='test_style'>Test</div>	        div	
 Capture	<div>Hello <span>world</span></div>	        div
+
+<(\w+)
 ```
+
+> 如果需要，您还可以捕获标签内容 `>([\w\s]*)<`，甚至属性值 `='([\w://.]*)'`（虽然不是这个问题的目标）。
 
 ## 问题 5: 匹配特定文件名
 
@@ -90,6 +94,7 @@ Capture	    favicon.gif	            favicon gif
 Skip	    img0912.jpg.tmp		
 Skip	    access.lock	
 
+^(\w+)\.(jpg|png|gif)$
 ```
 
 ## 问题 6: 从行首和行尾修剪空白
@@ -104,6 +109,8 @@ Skip	    access.lock
 Task	Text	                            Capture Groups	 
 Capture				The quick brown fox...	The quick brown fox...	
 Capture	   jumps over the lazy dog.	        jumps over the lazy dog.
+
+^\s*(.+)\s*$
 ```
 
 ## 问题 7: 从日志文件提取信息
@@ -121,6 +128,8 @@ Capture	    E/( 1553):   at widget.List.fillDown(ListView.java:652)	    fillDown
                                                                         ListView.java 652	
 Capture	    E/( 1553):   at widget.List.fillFrom(ListView.java:709)	    fillFrom 
                                                                         ListView.java 709
+
+(\w+)\(([\w\.]+):(\d+)\)$
 ```
 
 ## 问题 8: 从 URL 解析和提取数据
@@ -142,6 +151,8 @@ Capture	    https://regexone.com/lesson/introduction#section	                htt
 Capture	    file://localhost:4040/zip_file	                                    file localhost 4040	
 Capture	    https://s3cur3-server.com:9999/	                                    https s3cur3-server.com 9999	
 Capture	    market://search/angry%20birds	                                    market search
+
+(\w+)://([\w\-\.]+)(:(\d+))?
 ```
 
 
