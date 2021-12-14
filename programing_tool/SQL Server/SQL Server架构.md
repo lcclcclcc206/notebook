@@ -1,0 +1,1 @@
+![What is SQL Server - SQL Server Architecture ](https://www.sqlservertutorial.net/wp-content/uploads/What-is-SQL-Server-SQL-Server-Architecture.png)
