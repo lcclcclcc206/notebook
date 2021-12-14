@@ -2,8 +2,6 @@
 
 记录学习了哪些内容
 
-<br>
-
 ## git
 
 ### [learn git branching](https://learngitbranching.js.org/?locale=zh_CN)
