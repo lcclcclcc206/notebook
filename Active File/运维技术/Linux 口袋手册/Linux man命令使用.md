@@ -1,0 +1,1 @@
+[[Linux\] 一文读懂 man 手册（man 1、 man 2 & 快捷键 ） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/518891500)

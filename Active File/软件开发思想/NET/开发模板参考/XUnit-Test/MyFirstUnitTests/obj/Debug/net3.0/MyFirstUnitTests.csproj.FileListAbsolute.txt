@@ -1,0 +1,6 @@
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\开发模板参考\XUnit-Test\MyFirstUnitTests\obj\Debug\net3.0\MyFirstUnitTests.csproj.AssemblyReference.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\开发模板参考\XUnit-Test\MyFirstUnitTests\obj\Debug\net3.0\MyFirstUnitTests.csproj.SuggestedBindingRedirects.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\开发模板参考\XUnit-Test\MyFirstUnitTests\obj\Debug\net3.0\MyFirstUnitTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\开发模板参考\XUnit-Test\MyFirstUnitTests\obj\Debug\net3.0\MyFirstUnitTests.AssemblyInfoInputs.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\开发模板参考\XUnit-Test\MyFirstUnitTests\obj\Debug\net3.0\MyFirstUnitTests.AssemblyInfo.cs
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\开发模板参考\XUnit-Test\MyFirstUnitTests\obj\Debug\net3.0\MyFirstUnitTests.csproj.CoreCompileInputs.cache

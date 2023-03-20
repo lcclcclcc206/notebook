@@ -1,0 +1,1 @@
+请参考 [Installing NGINX and NGINX Plus | NGINX Plus](https://docs.nginx.com/nginx/admin-guide/installing-nginx/)

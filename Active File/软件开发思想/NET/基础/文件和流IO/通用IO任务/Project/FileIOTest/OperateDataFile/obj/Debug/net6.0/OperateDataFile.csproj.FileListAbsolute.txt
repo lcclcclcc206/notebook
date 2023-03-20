@@ -1,0 +1,15 @@
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\bin\Debug\net6.0\OperateDataFile.exe
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\bin\Debug\net6.0\OperateDataFile.deps.json
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\bin\Debug\net6.0\OperateDataFile.runtimeconfig.json
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\bin\Debug\net6.0\OperateDataFile.dll
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\bin\Debug\net6.0\OperateDataFile.pdb
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\obj\Debug\net6.0\OperateDataFile.csproj.AssemblyReference.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\obj\Debug\net6.0\OperateDataFile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\obj\Debug\net6.0\OperateDataFile.AssemblyInfoInputs.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\obj\Debug\net6.0\OperateDataFile.AssemblyInfo.cs
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\obj\Debug\net6.0\OperateDataFile.csproj.CoreCompileInputs.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\obj\Debug\net6.0\OperateDataFile.dll
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\obj\Debug\net6.0\refint\OperateDataFile.dll
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\obj\Debug\net6.0\OperateDataFile.pdb
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\obj\Debug\net6.0\OperateDataFile.genruntimeconfig.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\NET\文件和流IO\通用IO任务\Project\FileIOTest\OperateDataFile\obj\Debug\net6.0\ref\OperateDataFile.dll

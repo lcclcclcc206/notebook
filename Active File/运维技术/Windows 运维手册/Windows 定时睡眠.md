@@ -1,0 +1,1 @@
+[windows 10 pro 如何使用命令行睡眠PC? - Microsoft Community](https://answers.microsoft.com/zh-hans/windows/forum/all/windows-10-pro/cd89b406-6df6-408f-b20c-511f117798d9)

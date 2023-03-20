@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "mtNEY8WsNQsVvicOauw+wKtf1/7uiMOnMEURBZfhdSzbr1n6/gTdzNhTLyRnKi4hfgKjpPFlQCqxRh+nUe0b0w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lcc206\\OneDrive\\Task\\Active File\\软件开发思想\\CommandLineParserTutorial\\GetStartSample\\GetStartSample.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lcc206\\.nuget\\packages\\commandlineparser\\2.9.1\\commandlineparser.2.9.1.nupkg.sha512"
+  ],
+  "logs": []
+}

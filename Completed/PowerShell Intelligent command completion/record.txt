@@ -1,0 +1,119 @@
+**********************
+PowerShell transcript start
+Start time: 20220607124525
+Username: LCC-THINKBOOK\lcc
+RunAs User: LCC-THINKBOOK\lcc
+Configuration Name: 
+Machine: LCC-THINKBOOK (Microsoft Windows NT 10.0.22621.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 4004
+PSVersion: 7.2.4
+PSEdition: Core
+GitCommitId: 7.2.4
+OS: Microsoft Windows 10.0.22621
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.0, 7.2.4
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is ./record.txt
+PowerShell Intelligent command completion>
+PS>Get-Module -Name PSReadLine
+
+ModuleType Version    PreRelease Name                                ExportedCommands
+---------- -------    ---------- ----                                ----------------
+Script     2.1.0                 PSReadLine                          {Get-PSReadLineKeyHandler, Get-PSReadLineOptio…
+
+PowerShell Intelligent command completion>
+PS>Install-Module -Name PSReadLine
+WARNING: Version '2.1.0' of module 'PSReadLine' is already installed at 'C:\program files\powershell\7\Modules\PSReadLine'. To install version '2.2.5', run Install-Module and add the -Force parameter, this command will install version '2.2.5' side-by-side with version '2.1.0'.
+PowerShell Intelligent command completion>
+PS>Install-Module -Name PSReadLine -Force
+PowerShell Intelligent command completion>
+PS>Get-Module -Name PSReadLine
+
+ModuleType Version    PreRelease Name                                ExportedCommands
+---------- -------    ---------- ----                                ----------------
+Script     2.1.0                 PSReadLine                          {Get-PSReadLineKeyHandler, Get-PSReadLineOptio…
+
+PowerShell Intelligent command completion>
+PS>Get-Module -Name PSReadLine
+
+ModuleType Version    PreRelease Name                                ExportedCommands
+---------- -------    ---------- ----                                ----------------
+Script     2.1.0                 PSReadLine                          {Get-PSReadLineKeyHandler, Get-PSReadLineOptio…
+
+PowerShell Intelligent command completion>
+PS>echo need refresh
+need
+refresh
+PowerShell Intelligent command completion>
+PS>Import-Module *
+PowerShell Intelligent command completion>
+PS>Get-Module -Name PSReadLine
+
+ModuleType Version    PreRelease Name                                ExportedCommands
+---------- -------    ---------- ----                                ----------------
+Script     2.1.0                 PSReadLine                          {Get-PSReadLineKeyHandler, Get-PSReadLineOptio…
+
+PowerShell Intelligent command completion>
+PS>Import-Module PSReadLine
+>> TerminatingError(Import-Module): "Assembly with same name is already loaded"
+
+Import-Module: Assembly with same name is already loaded
+
+Import-Module: Assembly with same name is already loaded
+PowerShell Intelligent command completion>
+PS>Import-Module PSReadLine -Force
+>> TerminatingError(Import-Module): "Assembly with same name is already loaded"
+
+Import-Module: Assembly with same name is already loaded
+
+Import-Module: Assembly with same name is already loaded
+PowerShell Intelligent command completion>
+PS>Get-Module -Name PSReadLine
+
+ModuleType Version    PreRelease Name                                ExportedCommands
+---------- -------    ---------- ----                                ----------------
+Script     2.1.0                 PSReadLine                          {Get-PSReadLineKeyHandler, Get-PSReadLineOptio…
+
+PowerShell Intelligent command completion>
+PS>Update-Module PSReadLine
+PowerShell Intelligent command completion>
+PS>Get-Module -Name PSReadLine
+
+ModuleType Version    PreRelease Name                                ExportedCommands
+---------- -------    ---------- ----                                ----------------
+Script     2.1.0                 PSReadLine                          {Get-PSReadLineKeyHandler, Get-PSReadLineOptio…
+
+PowerShell Intelligent command completion>
+PS>pwsh
+https://aka.ms/powershell
+Type 'help' to get help.
+
+PowerShell Intelligent command completion> Get-Module -Name PSReadLine
+
+ModuleType Version    PreRelease Name                                ExportedCommands
+---------- -------    ---------- ----                                ----------------
+Script     2.2.5                 PSReadLine                          {Get-PSReadLineKeyHandler, Get-PSReadLineOptio…
+
+PowerShell Intelligent command completion> Start-Transcript ./record2.txt
+Transcript started, output file is ./record2.txt
+PowerShell Intelligent command completion> code $PROFILE
+PowerShell Intelligent command completion> pwsh
+PowerShell 7.2.4
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/powershell
+Type 'help' to get help.
+
+PowerShell Intelligent command completion> pwsh
+PowerShell 7.2.4
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/powershell
+Type 'help' to get help.
+
+PowerShell Intelligent command completion> Get-Clipboard | Out-File AddtionProfile.txt
+PowerShell Intelligent command completion>

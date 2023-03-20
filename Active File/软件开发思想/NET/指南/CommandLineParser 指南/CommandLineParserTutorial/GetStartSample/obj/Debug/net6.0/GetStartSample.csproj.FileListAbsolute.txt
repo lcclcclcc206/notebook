@@ -1,0 +1,17 @@
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\bin\Debug\net6.0\GetStartSample.exe
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\bin\Debug\net6.0\GetStartSample.deps.json
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\bin\Debug\net6.0\GetStartSample.runtimeconfig.json
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\bin\Debug\net6.0\GetStartSample.dll
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\bin\Debug\net6.0\GetStartSample.pdb
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\bin\Debug\net6.0\CommandLine.dll
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\obj\Debug\net6.0\GetStartSample.csproj.AssemblyReference.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\obj\Debug\net6.0\GetStartSample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\obj\Debug\net6.0\GetStartSample.AssemblyInfoInputs.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\obj\Debug\net6.0\GetStartSample.AssemblyInfo.cs
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\obj\Debug\net6.0\GetStartSample.csproj.CoreCompileInputs.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\obj\Debug\net6.0\GetStartSample.csproj.CopyComplete
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\obj\Debug\net6.0\GetStartSample.dll
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\obj\Debug\net6.0\refint\GetStartSample.dll
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\obj\Debug\net6.0\GetStartSample.pdb
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\obj\Debug\net6.0\GetStartSample.genruntimeconfig.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\GetStartSample\obj\Debug\net6.0\ref\GetStartSample.dll

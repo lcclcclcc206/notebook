@@ -1,0 +1,80 @@
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\bin\Debug\SelectOne.exe.config
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\bin\Debug\SelectOne.exe
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\bin\Debug\SelectOne.pdb
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.AssemblyReference.cache
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.SuggestedBindingRedirects.cache
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\MainWindow.g.cs
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\App.g.cs
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne_MarkupCompile.cache
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne_MarkupCompile.lref
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\MainWindow.baml
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.g.resources
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.Properties.Resources.resources
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.GenerateResource.cache
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.CoreCompileInputs.cache
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.exe
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.pdb
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\bin\Debug\SelectOne.exe.manifest
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\bin\Debug\SelectOne.application
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.exe.manifest
+C:\Users\lcc\Desktop\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.application
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\bin\Debug\SelectOne.exe.config
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\bin\Debug\SelectOne.exe.manifest
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\bin\Debug\SelectOne.application
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\bin\Debug\SelectOne.exe
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\bin\Debug\SelectOne.pdb
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.AssemblyReference.cache
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.SuggestedBindingRedirects.cache
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\MainWindow.g.cs
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\App.g.cs
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne_MarkupCompile.cache
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne_MarkupCompile.lref
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\MainWindow.baml
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.g.resources
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.Properties.Resources.resources
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.GenerateResource.cache
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.CoreCompileInputs.cache
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.exe.manifest
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.application
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.exe
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\SelectOne\obj\Debug\SelectOne.pdb
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\bin\Debug\SelectOne.exe.config
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\bin\Debug\SelectOne.exe.manifest
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\bin\Debug\SelectOne.application
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\bin\Debug\SelectOne.exe
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\bin\Debug\SelectOne.pdb
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.AssemblyReference.cache
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.SuggestedBindingRedirects.cache
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\MainWindow.g.cs
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\App.g.cs
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne_MarkupCompile.cache
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne_MarkupCompile.lref
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\MainWindow.baml
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne.g.resources
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne.Properties.Resources.resources
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.GenerateResource.cache
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.CoreCompileInputs.cache
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne.exe.manifest
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne.application
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne.exe
+C:\Users\lcc206\Desktop\temp\SelectOne\SelectOne\obj\Debug\SelectOne.pdb
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\bin\Debug\SelectOne.exe.config
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\bin\Debug\SelectOne.exe.manifest
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\bin\Debug\SelectOne.application
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\bin\Debug\SelectOne.exe
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\bin\Debug\SelectOne.pdb
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.AssemblyReference.cache
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.SuggestedBindingRedirects.cache
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\MainWindow.g.cs
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\App.g.cs
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne_MarkupCompile.cache
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne_MarkupCompile.lref
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\MainWindow.baml
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne.g.resources
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne.Properties.Resources.resources
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.GenerateResource.cache
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne.csproj.CoreCompileInputs.cache
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne.exe.manifest
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne.application
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne.exe
+C:\Users\lcc206\OneDrive\Task\Active File\SelectOne\SelectOne\obj\Debug\SelectOne.pdb

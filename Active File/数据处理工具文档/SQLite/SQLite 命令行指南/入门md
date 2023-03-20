@@ -1,0 +1,527 @@
+[Command Line Shell For SQLite](https://www.sqlite.org/cli.html)
+
+## 开始
+
+The SQLite project provides a simple command-line program named **sqlite3** (or **sqlite3.exe** on Windows) that allows the user to manually enter and execute SQL statements against an SQLite database or against a [ZIP archive](https://www.sqlite.org/cli.html#zipdb). This document provides a brief introduction on how to use the **sqlite3** program.
+
+Start the **sqlite3** program by typing "sqlite3" at the command prompt, optionally followed by the name of the file that holds the SQLite database (or [ZIP archive](https://www.sqlite.org/cli.html#zipdb)). If the named file does not exist, a new database file with the given name will be created automatically. If no database file is specified on the command-line, a temporary database is created and automatically deleted when the "sqlite3" program exits.
+
+On startup, the **sqlite3** program will show a brief banner message then prompt you to enter SQL. Type in SQL statements (terminated by a semicolon), press "Enter" and the SQL will be executed.
+
+For example, to create a new SQLite database named "ex1" with a single table named "tbl1", you might do this:
+
+```sqlite
+$ sqlite3 ex1
+SQLite version 3.36.0 2021-06-18 18:36:39
+Enter ".help" for usage hints.
+sqlite> create table tbl1(one text, two int);
+sqlite> insert into tbl1 values('hello!',10);
+sqlite> insert into tbl1 values('goodbye', 20);
+sqlite> select * from tbl1;
+hello!|10
+goodbye|20
+sqlite>
+```
+
+Terminate the sqlite3 program by typing your system End-Of-File character (usually a Control-D). Use the interrupt character (usually a Control-C) to stop a long-running SQL statement.
+
+Make sure you type a semicolon at the end of each SQL command! The sqlite3 program looks for a semicolon to know when your SQL command is complete. If you omit the semicolon, sqlite3 will give you a continuation prompt and wait for you to enter more text to complete the SQL command. This feature allows you to enter SQL commands that span multiple lines. For example:
+
+## 在 Windows 上双击启动
+
+Windows users can double-click on the **sqlite3.exe** icon to cause the command-line shell to pop-up a terminal window running SQLite. However, because double-clicking starts the sqlite3.exe without command-line arguments, no database file will have been specified, so SQLite will use a temporary database that is deleted when the session exits. To use a persistent disk file as the database, enter the ".open" command immediately after the terminal window starts up:
+
+```sqlite
+SQLite version 3.36.0 2021-06-18 18:36:39
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open ex1.db
+sqlite>
+```
+
+The example above causes the database file named "ex1.db" to be opened and used. The "ex1.db" file is created if it does not previously exist. You might want to use a full pathname to ensure that the file is in the directory that you think it is in. Use forward-slashes as the directory separator character. In other words use "c:/work/ex1.db", not "c:\work\ex1.db".
+
+Alternatively, you can create a new database using the default temporary storage, then save that database into a disk file using the ".save" command:
+
+```sqlite
+SQLite version 3.36.0 2021-06-18 18:36:39
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> ... many SQL commands omitted ...
+sqlite> .save ex1.db
+sqlite>
+```
+
+Be careful when using the ".save" command as it will overwrite any preexisting database files having the same name without prompting for confirmation. As with the ".open" command, you might want to use a full pathname with forward-slash directory separators to avoid ambiguity.
+
+## sqlite3 中的特殊命令
+
+> 请参考 “参考.md”
+
+Most of the time, sqlite3 just reads lines of input and passes them on to the SQLite library for execution. But input lines that begin with a dot (".") are intercepted and interpreted by the sqlite3 program itself. These "dot commands" are typically used to change the output format of queries, or to execute certain prepackaged query statements. There were originally just a few dot commands, but over the years many new features have accumulated so that today there are over 60.
+
+For a listing of the available dot commands, you can enter ".help" with no arguments. Or enter ".help TOPIC" for detailed information about TOPIC. 
+
+## SQL 与 点命令的规则
+
+The CLI's input is parsed into a sequence consisting of:
+
+- SQL statements;
+- dot-commands; or
+- CLI comments
+
+SQL statements are free-form, and can be spread across multiple lines, with whitespace or SQL comments embedded anywhere. They are terminated by either a ';' character at the end of an input line, or a '/' character or the word "go" on a line by itself. When not at the end of an input line, the ';' character acts to separate SQL statements. Trailing whitespace is ignored for purposes of termination.
+
+A dot-command has a more restrictive structure:
+
+- It must begin with its "." at the left margin with no preceding whitespace.
+- It must be entirely contained on a single input line.
+- It cannot occur in the middle of an ordinary SQL statement. In other words, it cannot occur at a continuation prompt.
+- There is no comment syntax for dot-commands.
+
+The CLI also accepts whole-line comments that begin with a '#' character and extend to the end of the line. There can be no with whitespace prior to the '#'.
+
+**点命令的参数**
+
+The arguments passed to dot-commands are parsed from the command tail, per these rules:
+
+1. The trailing newline and any other trailing whitespace is discarded;
+
+2. Whitespace immediately following the dot-command name, or any argument input end bound is discarded;
+
+3. An argument input begins with any non-whitespace character;
+
+4. An argument input ends with a character which depends upon its leading character thusly:
+
+5. - for a leading single-quote ('), a single-quote acts as the end delimiter;
+   - for a leading double-quote ("), an unescaped double-quote acts as the end delimiter;
+   - for any other leading character, the end delimiter is any whitespace; and
+   - the command tail end acts as the end delimiter for any argument;
+
+6. Within a double-quoted argument input, a backslash-escaped double-quote is part of the argument rather than its terminating quote;
+
+7. Within a double-quoted argument, traditional C-string literal, backslash escape sequence translation is done; and
+
+8. Argument input delimiters (the bounding quotes or whitespace) are discarded to yield the passed argument.
+
+## 改变输出格式
+
+The sqlite3 program is able to show the results of a query in 14 different output formats:
+
+- ascii
+- box
+- csv
+- column
+- html
+- insert
+- json
+- line
+- list
+- markdown
+- quote
+- table
+
+You can use the ".mode" dot command to switch between these output formats. The default output mode is "list". In list mode, each row of a query result is written on one line of output and each column within that row is separated by a specific separator string. The default separator is a pipe symbol ("|"). List mode is especially useful when you are going to send the output of a query to another program (such as AWK) for additional processing.
+
+```sqlite
+sqlite> .mode list
+sqlite> select * from tbl1;
+hello!|10
+goodbye|20
+sqlite>
+```
+
+Type ".mode" with no arguments to show the current mode:
+
+```sqlite
+sqlite> .mode
+current output mode: list
+sqlite>
+```
+
+Use the ".separator" dot command to change the separator. For example, to change the separator to a comma and a space, you could do this:
+
+```sqlite
+sqlite> .separator ", "
+sqlite> select * from tbl1;
+hello!, 10
+goodbye, 20
+sqlite>
+```
+
+The next ".mode" command might reset the ".separator" back to some default value (depending on its arguments). So you will likely need to repeat the ".separator" command whenever you change modes if you want to continue using a non-standard separator.
+
+In "quote" mode, the output is formatted as SQL literals. Strings are enclosed in single-quotes and internal single-quotes are escaped by doubling. Blobs are displayed in hexadecimal blob literal notation (Ex: x'abcd'). Numbers are displayed as ASCII text and NULL values are shown as "NULL". All columns are separated from each other by a comma (or whatever alternative character is selected using ".separator").
+
+```sqlite
+sqlite> .mode quote
+sqlite> select * from tbl1;
+'hello!',10
+'goodbye',20
+sqlite>
+```
+
+In "line" mode, each column in a row of the database is shown on a line by itself. Each line consists of the column name, an equal sign and the column data. Successive records are separated by a blank line. Here is an example of line mode output:
+
+```sqlite
+sqlite> .mode line
+sqlite> select * from tbl1;
+one = hello!
+two = 10
+
+one = goodbye
+two = 20
+sqlite>
+```
+
+In column mode, each record is shown on a separate line with the data aligned in columns. For example:
+
+```sqlite
+sqlite> .mode column
+sqlite> select * from tbl1;
+one       two       
+--------  ---
+hello!    10        
+goodbye   20        
+sqlite>
+```
+
+In "column" mode (and also in "box", "table", and "markdown" modes) the width of columns adjusts automatically. But you can override this, providing a speicified width for each column using the ".width" command. The arguments to ".width" are integers which are the number of characters to devote to each column. Negative numbers mean right-justify. Thus:
+
+```sqlite
+sqlite> .width 12 -6
+sqlite> select * from tbl1;
+one              two
+------------  ------
+hello!            10
+goodbye           20
+sqlite>
+```
+
+A width of 0 means the column width is chosen automatically. Unspecified column widths become zero. Hence, the command ".width" with no arguments resets all column widths to zero and hence causes all column widths to be determined automatically.
+
+The "column" mode is a tabular output format. Other tabular output formats are "box", "markdown", and "table":
+
+```sqlite
+sqlite> .width
+sqlite> .mode markdown
+sqlite> select * from tbl1;
+|   one   | two |
+|---------|-----|
+| hello!  | 10  |
+| goodbye | 20  |
+sqlite> .mode table
+sqlite> select * from tbl1;
++---------+-----+
+|   one   | two |
++---------+-----+
+| hello!  | 10  |
+| goodbye | 20  |
++---------+-----+
+sqlite> .mode box
+sqlite> select * from tbl1;
+┌─────────┬─────┐
+│   one   │ two │
+├─────────┼─────┤
+│ hello!  │ 10  │
+│ goodbye │ 20  │
+└─────────┴─────┘
+sqlite>
+```
+
+The columnar modes accept some addition options to control formatting. The "--wrap *N*" option (where *N* is an integer) causes columns to wrap text that is longer than N characters. Wrapping is disabled if N is zero.
+
+```
+sqlite> insert into tbl1 values('The quick fox jumps over a lazy brown dog.',90);
+sqlite> .mode box --wrap 30
+sqlite> select * from tbl1 where two>50;
+┌────────────────────────────────┬─────┐
+│              one               │ two │
+├────────────────────────────────┼─────┤
+│ The quick fox jumps over a laz │ 90  │
+│ y brown dog.                   │     │
+└────────────────────────────────┴─────┘
+sqlite>
+```
+
+Wrapping happens after exactly *N* characters, which might be in the middle of a word. To wrap at a word boundary, add the "--wordwrap on" option (or just "-ww" for short):
+
+```sqlite
+sqlite> .mode box --wrap 30 -ww
+sqlite> select * from tbl1 where two>50;
+┌─────────────────────────────┬─────┐
+│             one             │ two │
+├─────────────────────────────┼─────┤
+│ The quick fox jumps over a  │ 90  │
+│ lazy brown dog.             │     │
+└─────────────────────────────┴─────┘
+sqlite>
+```
+
+The "--quote" option causes the results in each column to be quoted like an SQL literal, as in the "quote" mode. See the on-line help for additional options.
+
+The command ".mode box --wrap 60 --quote" is so useful for general-purpose database queries that it is given its own alias. Instead of typing out that whole 27-character command, you can just say ".mode qbox".
+
+Another useful output mode is "insert". In insert mode, the output is formatted to look like SQL INSERT statements. Use insert mode to generate text that can later be used to input data into a different database.
+
+When specifying insert mode, you have to give an extra argument which is the name of the table to be inserted into. For example:
+
+```sqlite
+sqlite> .mode insert new_table
+sqlite> select * from tbl1 where two<50;
+INSERT INTO "new_table" VALUES('hello',10);
+INSERT INTO "new_table" VALUES('goodbye',20);
+sqlite>
+```
+
+Other output modes include "csv", "json", and "tcl". Try these yourself to see what they do.
+
+## 查询数据库架构
+
+The sqlite3 program provides several convenience commands that are useful for looking at the schema of the database. There is nothing that these commands do that cannot be done by some other means. These commands are provided purely as a shortcut.
+
+For example, to see a list of the tables in the database, you can enter ".tables".
+
+```sqlite
+sqlite> .tables
+tbl1 tbl2
+sqlite>
+```
+
+The ".tables" command is similar to setting list mode then executing the following query:
+
+```sqlite
+SELECT name FROM sqlite_schema 
+WHERE type IN ('table','view') AND name NOT LIKE 'sqlite_%'
+ORDER BY 1
+```
+
+But the ".tables" command does more. It queries the [sqlite_schema](https://www.sqlite.org/schematab.html) table for all [attached](https://www.sqlite.org/lang_attach.html) databases, not just the primary database. And it arranges its output into neat columns.
+
+The ".indexes" command works in a similar way to list all of the indexes. If the ".indexes" command is given an argument which is the name of a table, then it shows just indexes on that table.
+
+The ".schema" command shows the complete schema for the database, or for a single table if an optional tablename argument is provided:
+
+```sqlite
+sqlite> .schema
+create table tbl1(one varchar(10), two smallint)
+CREATE TABLE tbl2 (
+  f1 varchar(30) primary key,
+  f2 text,
+  f3 real
+);
+sqlite> .schema tbl2
+CREATE TABLE tbl2 (
+  f1 varchar(30) primary key,
+  f2 text,
+  f3 real
+);
+sqlite>
+```
+
+The ".schema" command is roughly the same as setting list mode, then entering the following query:
+
+```sqlite
+SELECT sql FROM sqlite_schema
+ORDER BY tbl_name, type DESC, name
+```
+
+As with ".tables", the ".schema" command shows the schema for all [attached](https://www.sqlite.org/lang_attach.html) databases. If you only want to see the schema for a single database (perhaps "main") then you can add an argument to ".schema" to restrict its output:
+
+```sqlite
+sqlite> .schema tbll
+```
+
+The ".schema" command can be augmented with the "--indent" option, in which case it tries to reformat the various CREATE statements of the schema so that they are more easily readable by humans.
+
+The ".databases" command shows a list of all databases open in the current connection. There will always be at least 2. The first one is "main", the original database opened. The second is "temp", the database used for temporary tables. There may be additional databases listed for databases attached using the ATTACH statement. The first output column is the name the database is attached with, and the second result column is the filename of the external file. There may be a third result column which will be either "'r/o'" or "'r/w'" depending on whether the database file is read-only or read-write. And there might be a fourth result column showing the result of [sqlite3_txn_state()](https://www.sqlite.org/c3ref/txn_state.html) for that database file.
+
+```sqlite
+sqlite> .databases
+```
+
+The ".fullschema" dot-command works like the ".schema" command in that it displays the entire database schema. But ".fullschema" also includes dumps of the statistics tables "sqlite_stat1", "sqlite_stat3", and "sqlite_stat4", if they exist. The ".fullschema" command normally provides all of the information needed to exactly recreate a query plan for a specific query. When reporting suspected problems with the SQLite query planner to the SQLite development team, developers are requested to provide the complete ".fullschema" output as part of the trouble report. Note that the sqlite_stat3 and sqlite_stat4 tables contain samples of index entries and so might contain sensitive data, so do not send the ".fullschema" output of a proprietary database over a public channel.
+
+## I/O 重定向
+
+### 将结果写入文件
+
+By default, sqlite3 sends query results to standard output. You can change this using the ".output" and ".once" commands. Just put the name of an output file as an argument to .output and all subsequent query results will be written to that file. Or use the .once command instead of .output and output will only be redirected for the single next command before reverting to the console. Use .output with no arguments to begin writing to standard output again. For example:
+
+```sqlite
+sqlite> .mode list
+sqlite> .separator |
+sqlite> .output test_file_1.txt
+sqlite> select * from tbl1;
+sqlite> .exit
+$ cat test_file_1.txt
+hello|10
+goodbye|20
+$
+```
+
+If the first character of the ".output" or ".once" filename is a pipe symbol ("|") then the remaining characters are treated as a command and the output is sent to that command. This makes it easy to pipe the results of a query into some other process. For example, the "open -f" command on a Mac opens a text editor to display the content that it reads from standard input. So to see the results of a query in a text editor, one could type:
+
+```sqlite
+sqlite> .once | open -f
+sqlite> SELECT * FROM bigTable;
+```
+
+If the ".output" or ".once" commands have an argument of "-e" then output is collected into a temporary file and the system text editor is invoked on that text file. Thus, the command ".once -e" achieves the same result as ".once '|open -f'" but with the benefit of being portable across all systems.
+
+If the ".output" or ".once" commands have a "-x" argument, that causes them to accumulate output as Comma-Separated-Values (CSV) in a temporary file, then invoke the default system utility for viewing CSV files (usually a spreadsheet program) on the result. This is a quick way of sending the result of a query to a spreadsheet for easy viewing:
+
+```sqlite
+sqlite> .once -x
+sqlite> SELECT * FROM bigTable;
+```
+
+The ".excel" command is an alias for ".once -x". It does exactly the same thing.
+
+### 从文件中读取 SQL 语句
+
+In interactive mode, sqlite3 reads input text (either SQL statements or [dot-commands](https://www.sqlite.org/cli.html#dotcmd)) from the keyboard. You can also redirect input from a file when you launch sqlite3, of course, but then you do not have the ability to interact with the program. Sometimes it is useful to run an SQL script contained in a file entering other commands from the command-line. For this, the ".read" dot-command is provided.
+
+The ".read" command takes a single argument which is (usually) the name of a file from which to read input text.
+
+```
+sqlite> .read myscript.sql
+```
+
+The ".read" command temporarily stops reading from the keyboard and instead takes its input from the file named. Upon reaching the end of the file, input reverts back to the keyboard. The script file may contain dot-commands, just like ordinary interactive input.
+
+If the argument to ".read" begins with the "|" character, then instead of opening the argument as a file, it runs the argument (without the leading "|") as a command, then uses the output of that command as its input. Thus, if you have a script that generates SQL, you can execute that SQL directly using a command similar to the following:
+
+```
+sqlite> .read |myscript.bat
+```
+
+### 文件I/O 函数
+
+The command-line shell adds two [application-defined SQL functions](https://www.sqlite.org/appfunc.html) that facilitate reading content from a file into a table column, and writing the content of a column into a file, respectively.
+
+The readfile(X) SQL function reads the entire content of the file named X and returns that content as a BLOB. This can be used to load content into a table. For example:
+
+```
+sqlite> CREATE TABLE images(name TEXT, type TEXT, img BLOB);
+sqlite> INSERT INTO images(name,type,img)
+   ...>   VALUES('icon','jpeg',readfile('icon.jpg'));
+```
+
+The writefile(X,Y) SQL function write the blob Y into the file named X and returns the number of bytes written. Use this function to extract the content of a single table column into a file. For example:
+
+```
+sqlite> SELECT writefile('icon_output.jpg',img) FROM images WHERE name='icon';
+```
+
+Note that the readfile(X) and writefile(X,Y) functions are extension functions and are not built into the core SQLite library. These routines are available as a [loadable extension](https://www.sqlite.org/loadext.html) in the [ext/misc/fileio.c](http://www.sqlite.org/src/artifact?ci=trunk&filename=ext/misc/fileio.c) source file in the [SQLite source code repositories](https://www.sqlite.org/download.html#srctree).
+
+### SQL 函数：edit()
+
+The CLI has another built-in SQL function named edit(). Edit() takes one or two arguments. The first argument is a value - often a large multi-line string to be edited. The second argument is the invocation for a text editor. (It may include options to affect the editor's behavior.) If the second argument is omitted, the VISUAL environment variable is used. The edit() function writes its first argument into a temporary file, invokes the editor on the temporary file, rereads the file back into memory after the editor is done, then returns the edited text.
+
+The edit() function can be used to make changes to large text values. For example:
+
+```sqlite
+sqlite> UPDATE docs SET body=edit(body) WHERE name='report-15';
+```
+
+In this example, the content of the docs.body field for the entry where docs.name is "report-15" will be sent to the editor. After the editor returns, the result will be written back into the docs.body field.
+
+The default operation of edit() is to invoke a text editor. But by using an alternative edit program in the second argument, you can also get it to edit images or other non-text resources. For example, if you want to modify a JPEG image that happens to be stored in a field of a table, you could run:
+
+```sqlite
+sqlite> UPDATE pics SET img=edit(img,'gimp') WHERE id='pic-1542';
+```
+
+The edit program can also be used as a viewer, by simply ignoring the return value. For example, to merely look at the image above, you might run:
+
+```sqlite
+sqlite> SELECT length(edit(img,'gimp')) WHERE id='pic-1542';
+```
+
+### 以CSV或其他格式导入文件
+
+Use the ".import" command to import CSV (comma separated value) or similarly delimited data into an SQLite table. The ".import" command takes two arguments which are the source from which data is to be read and the name of the SQLite table into which the data is to be inserted. The source argument is the name of a file to be read or, if it begins with a "|" character, it specifies a command which will be run to produce the input data.
+
+Note that it may be important to set the "mode" before running the ".import" command. This is prudent to prevent the command-line shell from trying to interpret the input file text as some format other than how the file is structured. If the --csv or --ascii options are used, they control import input delimiters. Otherwise, the delimiters are those in effect for the current output mode.
+
+To import into a table not in the "main" schema, the --schema option may be used to specify that the table is in some other schema. This can be useful for ATTACH'ed databases or to import into a TEMP table.
+
+When .import is run, its treatment of the first input row depends upon whether the target table already exists. If it does not exist, the table is automatically created and the content of the first input row is used to set the name of all the columns in the table. In this case, the table data content is taken from the second and subsequent input rows. If the target table already exists, every row of the input, including the first, is taken to be actual data content. If the input file contains an initial row of column labels, you can make the .import command skip that initial row using the "--skip 1" option.
+
+Here is an example usage, loading a pre-existing temporary table from a CSV file which has column names in its first row:
+
+```sqlite
+sqlite> .import --csv --skip 1 --schema temp C:/work/somedata.csv tab1
+```
+
+### 导出为 CSV 格式
+
+To export an SQLite table (or part of a table) as CSV, simply set the "mode" to "csv" and then run a query to extract the desired rows of the table.
+
+```sqlite
+sqlite> .headers on
+sqlite> .mode csv
+sqlite> .once c:/work/dataout.csv
+sqlite> SELECT * FROM tab1;
+sqlite> .system c:/work/dataout.csv
+```
+
+In the example above, the ".headers on" line causes column labels to be printed as the first row of output. This means that the first row of the resulting CSV file will contain column labels. If column labels are not desired, set ".headers off" instead. (The ".headers off" setting is the default and can be omitted if the headers have not been previously turned on.)
+
+The line ".once *FILENAME*" causes all query output to go into the named file instead of being printed on the console. In the example above, that line causes the CSV content to be written into a file named "C:/work/dataout.csv".
+
+The final line of the example (the ".system c:/work/dataout.csv") has the same effect as double-clicking on the c:/work/dataout.csv file in windows. This will typically bring up a spreadsheet program to display the CSV file.
+
+That command only works as written on Windows. The equivalent line on a Mac would be:
+
+```sqlite
+sqlite> .system open dataout.csv
+```
+
+On Linux and other unix systems you will need to enter something like:
+
+```sqlite
+sqlite> .system xdg-open dataout.csv
+```
+
+### Excel 格式
+
+To simplify export to a spreadsheet, the CLI provides the ".excel" command which captures the output of a single query and sends that output to the default spreadsheet program on the host computer. Use it like this:
+
+```sqlite
+sqlite> .excel
+sqlite> SELECT * FROM tab;
+```
+
+The command above writes the output of the query as CSV into a temporary file, invokes the default handler for CSV files (usually the preferred spreadsheet program such as Excel or LibreOffice), then deletes the temporary file. This is essentially a short-hand method of doing the sequence of ".csv", ".once", and ".system" commands described above.
+
+The ".excel" command is really an alias for ".once -x". The -x option to .once causes it to writes results as CSV into a temporary file that is named with a ".csv" suffix, then invoke the systems default handler for CSV files.
+
+There is also a ".once -e" command which works similarly, except that it names the temporary file with a ".txt" suffix so that the default text editor for the system will be invoked, instead of the default spreadsheet.
+
+## 将整个数据库转换为文本文件
+
+Use the ".dump" command to convert the entire contents of a database into a single UTF-8 text file. This file can be converted back into a database by piping it back into **sqlite3**.
+
+A good way to make an archival copy of a database is this:
+
+```sqlite
+$ sqlite3 ex1 .dump | gzip -c >ex1.dump.gz
+```
+
+This generates a file named **ex1.dump.gz** that contains everything you need to reconstruct the database at a later time, or on another machine. To reconstruct the database, just type:
+
+```sqlite
+$ zcat ex1.dump.gz | sqlite3 ex2
+```
+
+The text format is pure SQL so you can also use the .dump command to export an SQLite database into other popular SQL database engines. Like this:
+
+```sqlite
+$ createdb ex2
+$ sqlite3 ex1 .dump | psql ex2
+```

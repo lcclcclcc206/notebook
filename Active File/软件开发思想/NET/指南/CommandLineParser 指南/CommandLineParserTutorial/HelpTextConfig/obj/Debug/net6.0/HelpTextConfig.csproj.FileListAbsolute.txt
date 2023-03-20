@@ -1,0 +1,17 @@
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\bin\Debug\net6.0\HelpTextConfig.exe
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\bin\Debug\net6.0\HelpTextConfig.deps.json
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\bin\Debug\net6.0\HelpTextConfig.runtimeconfig.json
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\bin\Debug\net6.0\HelpTextConfig.dll
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\bin\Debug\net6.0\HelpTextConfig.pdb
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\bin\Debug\net6.0\CommandLine.dll
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\obj\Debug\net6.0\HelpTextConfig.csproj.AssemblyReference.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\obj\Debug\net6.0\HelpTextConfig.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\obj\Debug\net6.0\HelpTextConfig.AssemblyInfoInputs.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\obj\Debug\net6.0\HelpTextConfig.AssemblyInfo.cs
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\obj\Debug\net6.0\HelpTextConfig.csproj.CoreCompileInputs.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\obj\Debug\net6.0\HelpTextConfig.csproj.CopyComplete
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\obj\Debug\net6.0\HelpTextConfig.dll
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\obj\Debug\net6.0\refint\HelpTextConfig.dll
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\obj\Debug\net6.0\HelpTextConfig.pdb
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\obj\Debug\net6.0\HelpTextConfig.genruntimeconfig.cache
+C:\Users\lcc206\OneDrive\Task\Active File\软件开发思想\CommandLineParserTutorial\HelpTextConfig\obj\Debug\net6.0\ref\HelpTextConfig.dll

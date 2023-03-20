@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperateDataFile", "OperateDataFile\OperateDataFile.csproj", "{DBADD4FF-2C06-4631-869B-A10B3F61549D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBADD4FF-2C06-4631-869B-A10B3F61549D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBADD4FF-2C06-4631-869B-A10B3F61549D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBADD4FF-2C06-4631-869B-A10B3F61549D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBADD4FF-2C06-4631-869B-A10B3F61549D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B269A02-61C7-413D-A774-4E2035004472}
+	EndGlobalSection
+EndGlobal
